@@ -1,0 +1,391 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400;500;600;700;800;900&display=swap');
+
+:root {
+	--body-color: #FFFFFF;
+	--nav-color: #FFF;
+	--primary-color: #33BBCF;
+	--primary-color-light: #D5EAFD;
+	--text-color: #334155;
+	--shadow-color: rgba(0, 0, 0, 0.45);
+	--shadow-color-light: rgba(100, 100, 111, 0.2);
+
+	/* transition */
+	--tran-02: all 0.2s ease;
+	--tran-03: all 0.3s ease;
+	--tran-04: all 0.4s ease;
+	--tran-05: all 0.5s ease;
+}
+
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+}
+
+body {
+	background-color: var(--body-color);
+	transition: var(--tran-05);
+	overflow-x: hidden;
+}
+
+body.dark {
+	--body-color: #0F172A;
+	--nav-color: #0F172A;
+	--primary-color: #E2E8F0;
+	--primary-color-light: #334155;
+	--text-color: #94A3B8;
+	--shadow-color: rgba(255, 255, 255, 0.1);
+	--shadow-color-light: rgba(0, 0, 0, 0.45);
+}
+
+/* nav start */
+
+nav {
+	position: fixed;
+	bottom: 0;
+	left: 0;
+	width: 100%;
+	height: 6em;
+	padding: 10px;
+	background-color: var(--nav-color);
+	z-index: 100;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	box-shadow: var(--shadow-color) 0px -15px 100px -20px;
+}
+
+nav .text {
+	font-size: 16px;
+	font-weight: 500;
+	color: var(--text-color);
+	white-space: wrap;
+	opacity: 1;
+}
+
+nav li {
+	height: 50px;
+	list-style: none;
+	display: flex;
+	align-items: center;
+	margin: 0 3px;
+}
+
+nav li .icon {
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	min-width: 3em;
+	font-size: 20px;
+}
+
+nav li .icon, 
+nav li .text {
+	color: var(--text-color);
+	transition: var(--tran-03);
+}
+
+nav .menu {
+	margin-top: 10px;
+}
+
+nav ul {
+	display: flex;
+}
+
+nav li a {
+	height: 100%;
+	width: 100%;
+	display: flex;
+	align-items: center;
+	text-decoration: none;
+	border-radius: 6px;
+	transition: var(--tran-04);
+}
+
+nav li a:hover {
+	background-color: var(--primary-color-light);
+}
+
+nav li a:hover .icon,
+nav li a:hover .text {
+	color: var(--text-color); 
+}
+
+body.dark nav li a:hover .icon,
+body.dark nav li a:hover .text {
+	color: var(--text-color); 
+}
+
+nav .menu-bar {
+	height: 100%;
+	display: flex;
+}
+
+.menu-bar .mode {
+	position: relative;
+	border-radius: 6px;
+	/* background: var(--primary-color-light); */
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	cursor: pointer;
+}
+
+.menu-bar .mode .moon-sun {
+	height: 50px;
+	width: 60px;
+	display: flex;
+	align-items: center;
+}
+
+.menu-bar .mode i {
+	position: absolute;
+	transition: var(--tran-03);
+}
+
+.menu-bar .mode i.sun {
+	opacity: 0;
+}
+
+body.dark .menu-bar .mode i.sun {
+	opacity: 1;
+}
+
+body.dark .menu-bar .mode i.moon {
+	opacity: 0;
+}
+
+.menu-bar .mode .toggle-switch {
+	position: absolute;
+	right: 0;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	height: 100%;
+	min-width: 60px;
+	cursor: pointer;
+	border-radius: 6px;
+	transition: var(--tran-05);
+	opacity: 0;
+}
+
+/* nav end */
+
+/* home start */
+
+#home {
+	width: 100%;
+	height: calc(100% + 6em);
+	padding: 30px 10px 130px;
+	display: flex;
+	justify-content: center;
+	/* align-items: center; */
+	flex-wrap: wrap;
+
+}
+
+#home .landing {
+	width: 100%;
+	height: calc(100vh - 6em);
+	background-color: var(--body-color);
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	flex-wrap: wrap;
+	/* display: none; */
+}
+
+section .text {
+	font-size: 1rem;
+	font-weight: 500;
+	color: var(--text-color);
+	padding: 10px 40px;
+	height: auto;
+}
+
+#home .landing .text {
+	width: 40rem;
+}
+
+#home .text p {
+	align-items: center;
+
+}
+
+section .text a,
+section .title {
+	color: var(--primary-color);
+	font-size: 2rem;
+	font-weight: bold;
+	text-decoration: none;
+	text-align: center;
+}
+
+#home .text a.itc {
+	color: var(--primary-color);
+	font-size: 1rem;
+	font-weight: bold;
+	text-decoration: solid var(--primary-color) underline 2px;
+	
+}
+
+#home .img {
+	max-width: 15rem;
+	min-width: 15rem;
+	height: auto;
+	border-radius: 50%;
+}
+
+#home .img img {
+	width: 100%;
+	height: 100%;
+	transition: var(--tran-05);
+}
+
+#home .img:hover img {
+	transform: rotate(360deg);
+}
+
+#home .about h1 {
+	margin: 50px 0 10px;
+}
+
+#home .about .text {
+	padding: 0 3rem;
+	margin: 0 auto;
+}
+
+#home .prestasi {
+	width: 100vw;
+	margin: 0 20px;
+}
+
+#home .prestasi .title {
+	margin: 100px 0 50px;
+	line-height: 1em;
+}
+
+#home .prestasi p {
+	margin-bottom: 20px;
+	color: var(--text-color);
+}
+
+#home .prestasi .ig {
+	display: flex;
+	flex-wrap: wrap;
+	gap: 20px;
+}
+
+/* gallery */
+
+#gallery img {
+	width: 185px;
+    height: auto;
+}
+
+#gallery {
+	padding: 50px 5px 150px;
+	margin: 0 auto;
+    display: grid;
+    place-items: center;
+	justify-items: center;
+    gap: 5px;
+    grid-template-columns: repeat(auto-fit, minmax(185px, 1fr));
+	display: none;
+}
+
+#gallery h1 {
+    grid-column: 1 / -1;
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+/* gallery ends */
+
+/* members start */
+
+#members {
+	padding: 50px 5px 150px;
+	display: none;
+	transition: var(--tran-05);
+}
+
+#members .team {
+	width: 100%;
+	height: auto;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	margin-bottom: 10px;
+}
+
+#members .team img {
+	max-width: 23rem;
+}
+
+#members .cards {
+	display: flex;
+	flex-wrap: wrap;
+	justify-content: center;
+	align-items: center;
+	gap: 20px;
+}
+
+#members h1 {
+    grid-column: 1 / -1;
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+#members .cards .card {
+	width: 200px;
+	height: 300px;
+	border-radius: 6px;
+	background-color: var(--nav-color);
+	box-shadow: var(--shadow-color-light) 0px 7px 29px 0px;
+}
+
+#members .cards .card img {
+	width: 100%;
+	border-radius: 3px;
+    height: auto;
+}
+
+#members .cards .card .card-text {
+	padding: 5px 10px;
+
+}
+
+#members .cards .card .name {
+	font-size: 1.2em;
+	color: var(--primary-color);
+	font-weight: bold;
+	line-height: 1em;
+
+}
+
+#members .cards .card .position {
+	font-size: 1em;
+	color: var(--text-color);
+}
+
+/* members ends */
+
+/* @media (min-width: 900px) {
+	#home {
+		margin-top: 90px;
+	}
+} */
+
+@media (max-width: 320px) {
+	nav li .icon {
+		min-width: 2em;
+	}
+	.menu-bar .mode .moon-sun,
+	.menu-bar .mode .toggle-switch {
+		width: 40px;
+	}
+}
