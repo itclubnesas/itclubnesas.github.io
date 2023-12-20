@@ -64,7 +64,7 @@ function send() {
   Email.send({
     SecureToken : "bcfb5f26-8616-41c7-9fe2-5c37edf0b2c4",
     To : 'daffahmadibrahim@gmail.com',
-    From : 'daffabot@programer.net',
+    From : 'daffabot@programmer.net',
     Subject : "New Contact Form Enquiry",
     Body : "Name: " + document.getElementById("name").value
        + "<br> Email: " + document.getElementById("email").value
