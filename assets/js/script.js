@@ -63,9 +63,9 @@ document.addEventListener('DOMContentLoaded', function() {
 function send(event) {
   event.preventDefault();
   Email.send({
-    SecureToken : " bcfb5f26-8616-41c7-9fe2-5c37edf0b2c4",
-    To : "daffahmadibrahim@gmail.com",
-    From : "daffabot@programer.net",
+    SecureToken : "bcfb5f26-8616-41c7-9fe2-5c37edf0b2c4",
+    To : 'daffahmadibrahim@gmail.com',
+    From : 'daffabot@programer.net',
     Subject : "New Contact Form Enquiry",
     Body : "Name: " + document.getElementById("name").value
        + "<br> Email: " + document.getElementById("email").value
