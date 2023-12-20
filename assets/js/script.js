@@ -74,7 +74,7 @@ function send() {
   if (message == "OK") {
     alert("Message Succesfully Sent!");
   } else {
-    alert("Something wrong i can feel it");
+    alert(message);
   }
 })
 .catch((error) => {
