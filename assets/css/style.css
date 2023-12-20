@@ -25,7 +25,6 @@
 
 html {
   overflow-x: hidden;
-  max-width: 100vw;
 }
 
 body {
@@ -53,7 +52,7 @@ nav {
 	position: fixed;
 	bottom: 0;
 	left: 0;
-	max-width: 100vw;
+	width: 100vw;
 	height: 6em;
 	overflow-x: hidden;
 	padding: 10px;
@@ -184,7 +183,6 @@ body.dark .menu-bar .mode i.moon {
 /* nav end */
 section {
   min-height: 100vh;
-  max-width: 100vw;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -193,7 +191,7 @@ section {
 /* home start */
 
 #home {
-	max-width: 100vw;
+	width: 100%;
 	height: calc(100% + 6em);
 	overflow-x: hidden;
 	padding: 30px 10px 130px;
@@ -204,7 +202,7 @@ section {
 }
 
 #home .landing {
-	max-width: 100vw;
+	width: 100%;
 	height: calc(100vh - 6em);
 	background-color: var(--body-color);
 	display: flex;
@@ -288,7 +286,7 @@ section .title {
 }
 
 #home .prestasi .ig {
-	max-width: 100vw;
+	width: 100vw;
 	display: flex;
 	flex-wrap: wrap;
 	justify-content: center;
@@ -305,16 +303,16 @@ section .title {
 }
 
 .people img {
-	width: 185px;
+    width: 185px;
     height: auto;
 }
 
 .people {
-	padding: 50px 5px 150px;
-	margin: 0 auto;
+    padding: 50px 5px 150px;
+    margin: 0 auto;
     display: grid;
     place-items: center;
-	justify-items: center;
+    justify-items: center;
     gap: 5px;
     grid-template-columns: repeat(auto-fit, minmax(185px, 1fr));
 }
