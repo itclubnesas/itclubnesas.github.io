@@ -3,13 +3,7 @@ const body = document.querySelector("body"),
   modeText = body.querySelector(".mode-text");
 
 modeSwitch.addEventListener("click", () => {
-    body.classList.toggle("dark");
-    
-    if (body.classList.contains("dark")) {
-        modeText.innerText = "Light Mode"
-    } else {
-        modeText.innerText = "Dark Mode"
-    }
+  body.classList.toggle("dark");
 });
 
 document.addEventListener('DOMContentLoaded', function() {
@@ -64,5 +58,26 @@ document.addEventListener('DOMContentLoaded', function() {
       }
     }, 20);
   }
-  
 
+//Fungsi mengirim pesan
+function send() {
+  Email.send({
+    SecureToken : "f30c75e7-8644-442e-91d3-b83d4c311057",
+    To : 'daffahmadibrahim@gmail.com',
+    From : 'daffabot@programer.net',
+    Subject : "New Contact Form Enquiry",
+    Body : "Name: " + document.getElementById("name").value
+       + "<br> Email: " + document.getElementById("email").value
+       + "<br> Message: " + document.getElementById("message").value
+})
+.then(function (message) {
+  if (message == "OK") {
+    alert("Message Succesfully Sent!");
+  } else {
+    alert("Something wrong i can feel it");
+  }
+})
+.catch((error) => {
+  alert("Error Sending Message: " + error);
+});
+}
