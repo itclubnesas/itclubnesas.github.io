@@ -60,8 +60,8 @@ document.addEventListener('DOMContentLoaded', function() {
   }
 
 //Fungsi mengirim pesan
-function send(event) {
-  event.preventDefault();
+function send() {
+  e.preventDefault();
   Email.send({
     SecureToken : "bcfb5f26-8616-41c7-9fe2-5c37edf0b2c4",
     To : 'daffahmadibrahim@gmail.com',
