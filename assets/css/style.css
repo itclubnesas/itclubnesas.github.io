@@ -24,10 +24,6 @@
   scroll-behavior: smooth;
 }
 
-html {
-  overflow-x: hidden;
-}
-
 body {
   background-color: var(--body-color);
   transition: var(--tran-05);
@@ -194,7 +190,6 @@ section {
 #home {
 	width: 100%;
 	height: calc(100% + 6em);
-	overflow-x: hidden;
 	padding: 30px 10px 130px;
 	display: flex;
 	justify-content: center;
@@ -419,7 +414,7 @@ section .title {
 }
 
 form {
-	max-width: 100vw;
+	min-width: 100vw;
   }
   form .form-group,
   form .text-center {
@@ -444,7 +439,7 @@ form {
 	box-shadow: 0px 7px 5px rgba(0, 0, 0, 0.11);
   }
   form .position-relative {
-	max-width: 30vw;
+	min-width: 30vw;
   }
   form .message .form-control {
 	padding: 0.5rem 1.8rem;
@@ -562,10 +557,6 @@ footer {
 
 footer p {
   font-size: 0.8rem;
-}
-
-footer .text {
-	text-align: center;
 }
 
 footer li {
