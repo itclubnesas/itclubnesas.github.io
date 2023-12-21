@@ -1,3 +1,23 @@
+//Script to preload image header + loading
+function preloadImage(url) {
+  return new Promise((resolve, reject) => {
+    const img = new Image();
+    img.src = url;
+    img.onload = resolve;
+    img.onerror = reject;
+  });
+}
+
+window.onload = () => {
+  preloadImage("../img/logo.png")
+    .then(() => {
+      console.log("Gambar profil berhasil dimuat pertama");
+    })
+    .catch((error) => {
+      console.error("Gagal memuat gambar profil:", error);
+    });
+};
+
 const body = document.querySelector("body"),
   modeSwitch = body.querySelector(".toggle-switch"),
   modeText = body.querySelector(".mode-text");
