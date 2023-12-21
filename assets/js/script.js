@@ -2,7 +2,7 @@ const body = document.querySelector("body"),
   modeSwitch = body.querySelector(".toggle-switch"),
   modeText = body.querySelector(".mode-text");
 
-//Fungsi toggle dark
+//fungsi dark mode
 modeSwitch.addEventListener("click", () => {
   body.classList.toggle("dark");
 });
